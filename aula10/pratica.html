@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando DOM</title>
+    <style>
+        button#but{
+            height: 50px;
+            width: 200px;
+            background-color: darkslateblue;
+            border-radius: 20px;
+            margin:15px;
+
+        }
+
+        input{
+            height: 30px;
+            width: 200px;
+            text-indent: 1em;
+            border-radius: 10px 0px 10px 0px;
+            margin: 15px;
+            
+        }
+
+        h1#menu{
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" name="Login" value="" placeholder="Login"><br>
+        <input type="password" name="Senha" value="" placeholder="Senha"><br>
+
+    <button type="button" id="but">
+        Enter
+    </button><br>
+
+    <script>
+
+        var log = window.document.getElementsByName("Login")[0];
+        log.addEventListener("click",clicou);
+        log.addEventListener("mouseout",saiu);
+        log.addEventListener("mouseenter",entrou);
+
+
+            function clicou(){
+                log.style.background="pink";
+                log.style.fontFamily="Verdana";
+                log.style.transition="0.8s";
+            }
+            
+                function entrou(){
+                        log.style.background="white";
+                    }
+
+                    function saiu(){
+                       
+                        log.style.fontFamily="Arial";
+                        log.style.transition="0.8s";
+
+                     }
+
+                    
+
+        var senha = window.document.getElementsByName("Senha")[0];
+        senha.addEventListener("click",clico);
+        senha.addEventListener("mouseenter",entro);
+        senha.addEventListener("mouseout",sai);
+
+                    function clico(){
+                        senha.style.background="pink";
+                        senha.style.fontFamily="Verdana";
+                        senha.style.transition="0.8s";
+
+                    }
+                        function entro(){
+                            senha.style.background="white";
+                        }
+
+                            function sai(){
+                                senha.style.background="white";
+                                senha.style.fontFamily="Arial";
+                                senha.style.transition="0.8s";
+
+                            }
+
+
+        var butao = window.document.getElementById("but");
+        butao.addEventListener("click", clicar);
+        butao.addEventListener("mouseenter", entrar);
+        butao.addEventListener("mouseout", sair);
+
+            function clicar(){
+                butao.innerText ="Clicou!";
+                butao.style.background ="green";
+                butao.style.fontFamily ="Arial";
+                butao.style.height ="200px";
+                butao.style.borderRadius="50%";
+                butao.style.transition="0.4s";
+            }
+
+                function entrar(){
+                    butao.innerText ="Entro!";
+                    butao.style.background = "white";
+                    butao.style.fontFamily="Arial";
+                    butao.style.borderRadius="20px";
+                    butao.style.height ="50px";
+                    butao.style.transition="0.4s";
+
+
+                }
+
+                    function sair(){
+                        butao.innerText="Saiu!";
+                        butao.style.background ="darkslateblue";
+                        butao.style.borderRadius="20px";
+                        butao.style.height ="50px";
+                        butao.style.transition="0.4s";
+
+                    }
+    </script>
+</body>
+</html>

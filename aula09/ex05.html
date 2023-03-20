@@ -23,33 +23,37 @@
     <h1> Iniciandos os estudos de DOM</h1>
         <p> Aqui vai o resultado</p>
             <p>Aprendendo a usar<strong> DOM</strong> em JavaScript</p>
-                <div id="clique">
+                <div name="msg">
                     clique em mim
                 </div>
         <script>
+            window.document.write("") ;
                                     /*Por Marca*/
-            var p1 = window.document.getElementsByTagName("p")[1]
-                window.document.write("O paragrafo está escrito assim: " + p1.innerText)
-                p1.style.color = "orange";
+            // var p1 = window.document.getElementsByTagName("p")[1];
+            //     window.document.write("O paragrafo está escrito assim: " + p1.innerText);
+            //     p1.style.color = "orange";
 
                                  /*Por ID*/
-                /*var d = window.document.getElementById("clique")
-                    d.style.background = "green"*/
+                //  var d = window.document.getElementById("msg")
+                //     d.style.background = "green";
+                //     d.style.fontFamily = "Display";
+                //     d.style.textAlign ="center";
+                //     d.style.fontSize ="2em";
 
                                  /*Por Name*/
-                /*var d = window.document.getElementsByName("clique")[0]
-                    d.innerText = "Olá!"
-                        d.style.background = "red"
-                            d.style.fontFamily = "Verdadana"
-                               d.style.fontSize = "2em"
-                                    d.style.fontWeight = "bold"*/
+                // var d = window.document.getElementsByName("msg")[0]
+                //     d.innerText = "Olá!"
+                //         d.style.background = "red"
+                //             d.style.fontFamily = "Verdadana"
+                //                d.style.fontSize = "2em"
+                //                     d.style.fontWeight = "bold"
 
                                  /*Por classes*/         
-                /*var d = window.document.getElementsByClassName("clique")[0]
+                var d = window.document.getElementsByClassName("clique")[0]
                     d.style.background = "blue"
                       d.style.border = "1px solid white"
                          d.style.height = "100px"
-                             d.innerText = "Olá Germano Manoel De Melo, Seja bem vindo! Em breve boas oportunidades chegaram."*/
+                             d.innerText = "Olá Germano Manoel De Melo, Seja bem vindo! Em breve boas oportunidades chegaram."
 
                              /*Por seletores*/
                 /*var d = window.document.querySelector("div#clique")
