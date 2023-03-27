@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+</head>
+
+<style>
+    input{
+        padding: 20px;
+    }
+</style>
+<body>
+    <h1>Calcular o Troco</h1>
+        <input type="button" name="botao" value="Comprar Tudo" id="cal">
+            <script>
+                var calcular = window.document.getElementById("cal");
+                    calcular.addEventListener("click",clicar);
+
+                        function clicar(){
+                           var produto = window.prompt("Qual o produto que você comprou?");
+                                var custo = Number(window.prompt(`Quanto custa o ${produto} que você comprou ?`));
+                                    var valor = Number(window.prompt(`Qual o valor que você deu para pagar o ${produto} ?`));
+
+                                        var resultado = valor - custo 
+
+                                        window.alert(`Você comprou um ${produto} que custa R$${custo}. Deu R$${valor} em dinheiro e vai receber R$${resultado} de troco. Volte sempre!`);
+                                    
+
+                        }
+            </script>
+        
+</body>
+</html>

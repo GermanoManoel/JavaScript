@@ -27,23 +27,33 @@
         h1#menu{
             z-index: -1;
         }
+
+        div{
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
 
-    <input type="text" name="Login" value="" placeholder="Login"><br>
-        <input type="password" name="Senha" value="" placeholder="Senha"><br>
-
-    <button type="button" id="but">
-        Enter
-    </button><br>
-
-    <script>
+    <div>
+        <input type="text" name="Login" value="" placeholder="Login"><br>
+            <input type="password" name="Senha" value="" placeholder="Senha"><br>
+        <button type="button" id="but">
+            Enter
+        </button><br>
+    </div>
+       
+        <script>
+    
 
         var log = window.document.getElementsByName("Login")[0];
         log.addEventListener("click",clicou);
-        log.addEventListener("mouseout",saiu);
         log.addEventListener("mouseenter",entrou);
+        log.addEventListener("mouseout",saiu);
+       
 
 
             function clicou(){
@@ -81,7 +91,6 @@
                         }
 
                             function sai(){
-                                senha.style.background="white";
                                 senha.style.fontFamily="Arial";
                                 senha.style.transition="0.8s";
 
