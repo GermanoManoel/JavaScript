@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+<style>
+    input{
+        padding: 30px;
+        font-size:1.3em;
+    }
+</style>
+<body>
+    <h1> Conversor de temperaturas</h1>
+    <input type="submit" name="enter" value="Converter" id="converter">
+    <!-- <input type="submit" name="enter" value="Converter"> -->
+    <script>
+        var con = window.document.getElementById("converter");
+        con.addEventListener("click",clicou);
+        function clicou(){
+            var celsius = Number(window.prompt("Digite uma temperatura em °C"));
+            var kelvin = celsius + 273
+            var fahrenheit = celsius * 1.8 + 32
+            document.write(`<strong>A temperatura de ${celsius}°C, corresponde a...</strong><br>`);
+            document.write(`${kelvin}°K {Kelvin}<br>`);
+            document.write(`${fahrenheit}°F {Fahrenheit}<br>`);
+            document.body.style.fontSize = "2em";
+        }
+    </script>
+</body>
+</html>

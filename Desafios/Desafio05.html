@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 4</title>
+    <title>Desafio 5</title>
 </head>
 <style>
     input{
@@ -17,14 +17,24 @@
         <p> Clique no botão acima para iniciar.</p>
 
     <script>
-        var cov = window.document.querySelector("input#converter");
-        cov.addEventListener("click", clicou);
-        
-            function clicou(){
-               var metros = Number(window.prompt("Digite uma distância em metros (m):"));
-                    var quilometro = metros/100;
-                    window.alert(`O valor em quilometros é ${quilometro}`);
-
+            var cov = window.document.getElementById("converter");
+            cov.addEventListener("click", clicou);
+            function clicou(){      
+                var metros = Number(window.prompt("Digite uma distância em metros (m):"));
+                    var quilometro = metros/1000;
+                    var hactometro = metros/100;
+                    var decametro = metros/10;
+                    var decimetro = metros*10;
+                    var centimetro = metros*100;
+                    var milimetro = metros*1.000;
+                    document.write(`<h1>A distancia entre ${metros} metros, corresponde a...</h1>`);
+                    document.write(`O valor em quilometros: ${quilometro}(Km)<br>`);
+                    document.write(`O valor em Hactometro: ${hactometro}(Hm)<br>`);
+                    document.write(`O valor em Decâmetros: ${decametro}(Dam)<br>`);
+                    document.write(`O valor em Decimetro: ${decimetro}(dm) <br>`);
+                    document.write(`O valor em centimetro: ${centimetro}(cm)<br>`);
+                    document.write(`O valor em milimetro: ${milimetro}(mm)`);
+                    document.body.style.fontSize ="2em";
             }
             
     </script>
