@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Lógica 08</title>
+</head>
+<style>
+    input{
+        padding: 20px;
+        font-size:18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <h1>Calcular Desconto</h1>
+    <input type="button" value="Desconto de 100%" id="desconto">
+    <div id="resul">
+        Clique no botão acima para iniciar. 
+    </div>
+
+    <script>
+        var resulta = window.document.getElementById("resul");
+        var desconto = window.document.getElementById("desconto");
+        desconto.addEventListener("click", clicou);
+        function clicou(){
+            var produto = window.prompt("Qual produto você comprou?");
+            var preco = Number(window.prompt(`Qual o preço do ${produto}?`));
+            var desconto = preco*10/100
+            var total = preco - desconto;
+            // document.write(`Calculando o desconto de 10% para ${produto}<br>`);
+            // document.write(`O preço original era R$ ${preco}<br>`);
+            // document.write(`Você acaba de ganhar R$ ${resultado} de desconto (-10%)<br>`);
+            // document.write(`No fim, Você vai pagar R$ ${total} no produto ${produto}<br>`);
+            resulta.innerHTML =`<h1>Calculando o desconto de 10% para ${produto}<br></h1> 
+            O preço original era R$ ${preco}<br> 
+            Você acaba de ganhar R$ ${desconto.toFixed(2)} de desconto (-10%)<br> 
+            No fim, Você vai pagar R$ ${total.toFixed(2)} no produto ${produto}<br>`;
+        } 
+        
+    </script>
+</body>
+</html>

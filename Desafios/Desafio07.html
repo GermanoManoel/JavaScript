@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    div input{
+        padding: 20px;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+</style>
+<body>
+    <div>
+        <h1> Conversor  R$  &rarr; US$ </h1>
+        <input type="button" id="converter" value="Converter">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        var dolar = window.prompt("Antes de mais nada quanto está a contação do Dólar agora ? ");
+        var conversor = window.document.getElementById("converter");
+         conversor.addEventListener("click",clicou);
+            function clicou(){
+                var quanto = window.prompt("Quanto você tem na carteira?");
+                 var resultado = quanto / dolar
+
+                 window.alert(`Com R$${quanto} você poder comprar ${resultado}U$`);
+
+            }
+    </script>
+</body>
+</html>

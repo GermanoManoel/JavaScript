@@ -3,8 +3,9 @@ function verificar(){
     var ano = data.getFullYear();
     var fAno = window.document.getElementById("txtano");
     var resultado = window.document.querySelector("div#res");
+   
     if(fAno.value.lenght == 0 || Number(fAno.value) > ano){
-        window.alert("[ERRO] sVerifique os dados e tente novamente!");
+        window.alert("[ERRO] Verifique os dados e tente novamente!");
     }else{
         var sexo = window.document.getElementsByName("sexo");
         var idade = ano - Number(fAno.value);
@@ -18,6 +19,7 @@ function verificar(){
                 //Criança
                 imagem.setAttribute("src", "imagens/bbM.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }else if (idade < 21){
                 //Jovem
                 imagem.setAttribute("src","imagens/jovemM.png");
@@ -26,10 +28,12 @@ function verificar(){
                 //Adulto
                 imagem.setAttribute("src","imagens/adultoM.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }else{
                 //Idoso
                 imagem.setAttribute("src","imagens/idoso.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }
         }else if (sexo[1].checked){
             genero = "Mulher"
@@ -37,18 +41,22 @@ function verificar(){
                 //Criança
                 imagem.setAttribute("src","imagens/bbmulher.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }else if (idade < 21){
                 //Jovem
-                imagem.setAttribute("src","imagens/adultoF.png");
+                imagem.setAttribute("src","imagens/jovemF.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }else if (idade < 50){
                 //Adulto
                 imagem.setAttribute("src","imagens/adultoF.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }else{
                 //Idoso
                 imagem.setAttribute("src","imagens/idosa.png");
                 imagem.style.height="200px"
+                imagem.style.margin="10px"
             }
         }
         resultado.style.textAlign = "center";

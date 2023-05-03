@@ -2,12 +2,10 @@ body{
     background-color: darkslategray;
     font:normal 15pt arial;
 }
-
 header{
     text-align: center;
     color:white;
 }
-
 section{
     background-color: white;
     padding: 15px;
@@ -15,22 +13,7 @@ section{
     border-radius: 10px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-    text-align: center;
 }
-
-.butao{
-    height: 30px;
-    width: 200px;
-    border-radius: 20px;
-    border:1px solid black;
-    cursor: pointer;
-    transition: 2s;
-}
-
-.butao:hover{
-    background-color: cornflowerblue;
-}
-
 footer{
    text-align: center;
    color:white;
