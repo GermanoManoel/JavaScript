@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(151, 211, 191);
+            font-family: normal 20pt 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Continuando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Clique em mim</div>
+
+    <div class="caixa"></div>
+
+    <button type="button" class="botao">
+        CLIQUE
+    </button>
+    <script>
+                    // Marca
+        // var corpo = document.body;
+        // var p1 = document.getElementsByTagName("p")[1];
+        // p1.style.color = "white"
+        // corpo.style.background = "yellow"
+
+                    //  ID
+        // var mensagem = document.getElementById("msg");
+        // mensagem.style.background = "red"
+        // mensagem.innerText = "Olá mundo"
+
+                    // Name
+        // var msg = document.getElementsByName("msg")[0];
+        // msg.innerText = "Oi Germano"
+
+                    //Class
+        // var msg = document.getElementsByClassName("msg")[0];
+        // msg.innerText = "Bom Dia!"
+        // msg.style.color = "white"
+
+                    // QuerySelector
+        // var msg = document.querySelector("div.msg");
+        // msg.innerHTML = "Bora estudar!"
+        // msg.style.color = "red"
+        
+
+        var caixa = document.getElementsByClassName("caixa")[0];
+        var botao = document.getElementsByClassName("botao")[0];
+            botao.addEventListener("click",clicou);
+            function clicou(){    
+                caixa.style.height = "500px"
+                caixa.style.width = "300px"
+                caixa.style.background = "white"
+                caixa.style.border = "1px solid black"
+                
+            }
+
+    </script>
+</body>
+</html>
