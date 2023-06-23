@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos click com formularios</title>
+</head>
+<body>
+    Primeiro Número:
+        <input type="number" id="num1">
+
+    <br>
+    Segundo Número:
+        <input type="number"  id="num2">
+    <br>
+    <!-- Soma:
+    <input type="radio" name="" id="soma"> 
+        <br>
+        Subtração:
+        <input type="radio" name="" id="sub">
+            <br>
+           Multiplicação:
+            <input type="radio" name="" id="mult">
+                <br>
+                Divisão:
+                <input type="radio" name="" id="div">
+                    <br> -->
+                     <input type="button" id="solu" value="Calcular">
+
+    <div id="res">
+        O resultado é...
+    </div>
+
+    <script>
+        // 1º passo pegar os valores dos inputs.
+        
+        var botao = document.getElementById("solu"); 
+        var resul = document.getElementById("res");
+            botao.addEventListener("click",clicou);
+            function clicou(){
+                var numero1 = document.getElementById("num1");
+                var numero2 = document.getElementById("num2");
+                    nu1 = Number(numero1.value);
+                    nu2 = Number(numero2.value);
+                    soma = nu1 + nu2
+                    resul.innerText = `A soma entre ${nu1} e ${nu2} é igual a: ${soma}`
+            }
+
+    </script>
+</body>
+</html>

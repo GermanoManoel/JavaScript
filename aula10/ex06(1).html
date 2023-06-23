@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>      
+        div.pai{
+            height: 90vh;
+            width: 90vw;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#area{
+            background-color: rgba(17, 127, 163, 0.705);
+            color: white;
+            font-weight: bold;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 20px;
+            
+        }
+
+  
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div id="area">
+            <p>
+                interaja...
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam temporibus autem rerum, cumque voluptas ratione aspernatur quidem natus possimus? Labore ab quibusdam praesentium doloremque quaerat vitae odio, in optio obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nesciunt! Quos sunt optio deserunt. At autem veritatis dignissimos id omnis ipsum provident voluptatum, pariatur error eius fugit velit vero modi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem veniam et explicabo ipsum modi illum inventore! Dolor suscipit culpa doloremque perspiciatis, quibusdam minima quae, architecto eum iste et eius autem.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var area = document.getElementById("area");
+        area.addEventListener("click", clicou);
+        area.addEventListener("mouseenter", entrou);
+        area.addEventListener("mouseout", saiu)
+            function clicou(){
+                area.style.background = "white"
+                area.innerHTML = "Clicou <br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam temporibus autem rerum, cumque voluptas ratione aspernatur quidem natus possimus? Labore ab quibusdam praesentium doloremque quaerat vitae odio, in optio obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, nesciunt! Quos sunt optio deserunt. At autem veritatis dignissimos id omnis ipsum provident voluptatum, pariatur error eius fugit velit vero modi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem veniam et explicabo ipsum modi illum inventore! Dolor suscipit culpa doloremque perspiciatis, quibusdam minima quae, architecto eum iste et eius autem."
+                area.style.width = "90%"
+                area.style.height = "90%"
+                area.style.borderRadius = "20px"
+                area.style.transition = "1s"
+                area.style.boxShadow = "6px 6px 12px black"
+                area.style.color = "black"
+                area.style.lineHeight = "1.2em"
+                
+            }
+
+            function entrou(){
+                area.style.background ="blue"
+                area.innerHTML = "Entrou"
+                area.style.borderRadius = "20px"
+                area.style.lineHeight = "200px"
+                area.style.textAlign = "center"
+                area.style.transform = "scale(110%)"
+            }
+
+            function saiu(){
+                area.style.background = "rgba(17, 127, 163, 0.705)"
+                area.innerHTML = "Saiu"
+                area.style.borderRadius = "20px"
+                area.style.transition = "1s"
+                area.style.boxShadow = "0px 0px 0px"
+                area.style.width = "200px"
+                area.style.height = "200px"
+                area.style.lineHeight = "200px"
+                area.style.textAlign = "center"
+                area.style.transform = "scale(100%)"
+            }
+    </script>
+</body>
+</html>

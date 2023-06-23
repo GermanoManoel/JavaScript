@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onde você mora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Onde você mora ?</h1>
+        <input type="text" name="onde_mora" id="onde_mora">
+            <button class="btn btn-info" type="submit">
+                Ver onde mora
+            </button>
+        
+            <div id="valor">
+                ...
+            </div>
+            <!-- || == ou
+                 && == e
+                 !  == não -->
+        <script>
+            var botao = document.getElementsByClassName("btn")[0];
+                botao.addEventListener("click", ver)
+                function ver(){
+                    var onde = document.getElementById("onde_mora");
+                    var val = document.getElementById("valor");
+                        if(onde.value == 'Brasil' || onde.value == 'brasil' || onde.value == 'BRASIL'){
+                            val.innerHTML = `Você é Brasileiro!<br>`
+                            val.innerHTML += `Que bom`
+                        }else{
+                            val.innerHTML = `Você é estrangeiro!`
+                        }
+                }
+        </script>
+</body>
+</html>

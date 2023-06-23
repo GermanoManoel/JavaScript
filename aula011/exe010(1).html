@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <style>
+        button{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sitemas de Multa</h1>
+    Velocidade:
+        <input type="number" name="velocidade" id="vel">
+         <br>
+            <button class="btn btn-info" type="button" id="bot" >
+                Verificar
+            </button>
+
+                <div id="res">
+                    ...
+                </div>
+        <script>
+            var velocidade = document.getElementById("vel");
+            var res = document.getElementById("res");
+            var botao = document.getElementById("bot");
+                botao.addEventListener("click" ,calcular);
+                    function calcular(){
+                            if( velocidade.value < 60){
+                                res.innerHTML =  `<h1>Continue prestando atenção e sempre andando na velocidade padrão!</h1>`
+                            }else{
+                                res.innerHTML =  `<h1>Multado por ultrapassa o limite de velocidade que é 60KM/H!`
+                            }
+                        }
+        </script>
+</body>
+</html>

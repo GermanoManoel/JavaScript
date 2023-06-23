@@ -1,7 +1,15 @@
 var agora = new Date();
 var diadaS = agora.getDay();
     console.log(diadaS);
-
+// Para o Js o Domingo é o dia 0 da semana! 
+    //  0 - Domingo
+    //  1 - Segunda
+    //  2 - Terça
+    //  3 - Quarta
+    //  4 - Quinta
+    //  5 - Sexta
+    //  6 - Sábado
+    
     switch(diadaS){
         case 0:
          console.log("Domingo");
@@ -32,11 +40,4 @@ var diadaS = agora.getDay();
               break
     }
 
-    // Para o Js o Domingo é o dia 0 da semana! 
-    //  0 - Domingo
-    //  1 - Segunda
-    //  2 - Terça
-    //  3 - Quarta
-    //  4 - Quinta
-    //  5 - Sexta
-    //  6 - Sábado
+    
