@@ -20,13 +20,11 @@
                     calcular.addEventListener("click",clicar);
 
                         function clicar(){
-                           var produto = window.prompt("Qual o produto que você comprou?");
-                                var custo = Number(window.prompt(`Quanto custa o ${produto} que você comprou ?`));
-                                    var valor = Number(window.prompt(`Qual o valor que você deu para pagar o ${produto} ?`));
-
-                                        var resultado = valor - custo 
-
-                                        window.alert(`Você comprou um ${produto} que custa R$${custo}. Deu R$${valor} em dinheiro e vai receber R$${resultado} de troco. Volte sempre!`);
+                            var produto = window.prompt("Qual o produto que você comprou?");
+                            var custo = Number(window.prompt(`Quanto custa o ${produto} que você comprou ?`));
+                            var valor = Number(window.prompt(`Qual o valor que você deu para pagar o ${produto} ?`));
+                            var resultado = valor - custo 
+                                window.alert(`Você comprou um ${produto} que custa R$${custo}. Deu R$${valor} em dinheiro e vai receber R$${resultado} de troco. Volte sempre!`);
                                     
 
                         }

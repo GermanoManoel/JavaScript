@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            width: 100px;
+            height: 30px;
+        }
+
+         div.res p{
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+        <button type="button" onclick="calcular()">
+            Calcular
+        </button>
+           
+
+        <div class="res">
+             <p>
+                Considerando uma equação ax² + bx + c = 0, aperte o botão acima para calcular o valor de Δ.
+            </p>
+        </div>
+
+        <div class="res">
+
+        </div>
+
+        <script>
+            function calcular(){
+               var resul = document.getElementsByClassName("res")[0];
+               var resul2 = document.getElementsByClassName("res")[1];
+               var valorA = Number(prompt("Digite o valor de A:"));
+               var valorB = Number(prompt("Digite o valor de B:"));
+               var valorC = Number(prompt("Digite o valor de C:"));
+                    var resultado = valorB**2 - 4 * valorA * valorC;
+                    var raizDelta = Math.sqrt(resultado);
+                        var x = (-valorB + raizDelta) / 2 * valorA;
+                        var xx = (-valorB - raizDelta) / 2 * valorA;
+
+                    resul.innerHTML = `
+                    <h1> Resultado Bhaskara </h1><br>
+                    A equação atual é ${valorB}X² + ${valorA}X + ${valorC} = 0 <br>
+                    O calculo realizado será Δ = ${valorB}² - 4.${valorA}.${valorC}<br> 
+                    O valor calculado foi Δ = ${resultado}<br>
+                    ----------------------------------------------------------`
+                    
+                   var valorX = prompt("Quer ver o valor de x' e x'' [Sim ou Não] ?");
+                    if(valorX == "sim" || valorX == "Sim" || valorX == "SIM"){
+                        resul2.innerHTML = `Formula: Δ = -b ± √Δ / 2.a<br>
+                                            Formula: Δ = -${valorB} ± ${raizDelta} / 2.${valorA} <br>
+                                            O valor de x' = ${x}<br>
+                                            O valor de x'' = ${xx}<br>
+                                            S = {${x}, ${xx}}`
+                    }
+            }
+        </script>
+</body>
+</html>
